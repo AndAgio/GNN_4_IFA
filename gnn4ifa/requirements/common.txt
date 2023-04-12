@@ -1,0 +1,8 @@
+numpy==1.18.0
+scikit-learn
+nats_bench
+matplotlib
+progress
+unrar
+patool
+pyunpack

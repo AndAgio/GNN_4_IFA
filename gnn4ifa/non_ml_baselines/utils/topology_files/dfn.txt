@@ -1,0 +1,84 @@
+# any empty lines and lines starting with '#' symbol is ignored
+
+# The file should contain exactly two sections: router and link, each starting with the corresponding keyword
+
+# router section defines topology nodes and their relative positions (e.g., to use in visualizer)
+router
+
+# each line in this section represents one router and should have the following data
+# node  comment     yPos    xPos
+Cons1	NA	14	8
+Cons2	NA	10	12
+Cons3	NA	6	2
+Cons4	NA	4	13
+Cons5	NA	10	2
+Cons6	NA	13	6
+Cons7	NA	14	7
+Cons8	NA	2	6
+Cons9	NA	8	3
+Cons10	NA	6	8
+Cons11	NA	4	10
+Cons12	NA	4	5
+Prod1	NA	10	9
+Prod2	NA	4	8
+Prod3	NA	14	12
+Prod4	NA	8	2
+Prod5	NA	9	7
+Prod6	NA	4	2
+Rout1	NA	12	8
+Rout2	NA	12	10
+Rout3	NA	9	4
+Rout4	NA	8	10
+Rout5	NA	4	4
+Rout6	NA	8	7
+Rout7	NA	6	4
+Rout8	NA	6	9
+Rout9	NA	6	12
+Rout10	NA	4	6
+Rout11	NA	5	7
+# link section defines point-to-point links between nodes and characteristics of these links
+
+link
+
+# Each line should be in the following format (only first two are required, the rest can be omitted)
+# srcNode   dstNode     bandwidth   metric  delay   queue
+# bandwidth: link bandwidth
+# metric: routing metric
+# delay:  link delay
+# queue:  MaxPackets for transmission queue on the link (both directions)
+# error:  comma-separated list, specifying class for ErrorModel and necessary attributes
+Cons1	Rout1	10Mbps	1	10ms	100	
+Cons2	Rout4	10Mbps	1	10ms	100	
+Cons4	Rout9	10Mbps	1	10ms	100	
+Cons3	Rout7	10Mbps	1	10ms	100	
+Cons7	Rout1	10Mbps	1	10ms	100	
+Cons6	Rout1	10Mbps	1	10ms	100	
+Cons11	Rout9	10Mbps	1	10ms	100	
+Cons10	Rout8	10Mbps	1	10ms	100	
+Cons12	Rout10	10Mbps	1	10ms	100	
+Cons8	Rout11	10Mbps	1	10ms	100	
+Cons9	Rout5	10Mbps	1	10ms	100	
+Cons5	Rout3	10Mbps	1	10ms	100	
+Prod3	Rout2	10Mbps	1	10ms	100	
+Prod1	Rout4	10Mbps	1	10ms	100	
+Prod5	Rout6	10Mbps	1	10ms	100	
+Prod2	Rout10	10Mbps	1	10ms	100	
+Prod4	Rout3	10Mbps	1	10ms	100	
+Prod6	Rout7	10Mbps	1	10ms	100	
+Rout1	Rout2	10Mbps	1	10ms	100	
+Rout1	Rout9	10Mbps	1	10ms	100	
+Rout1	Rout8	10Mbps	1	10ms	100	
+Rout2	Rout4	10Mbps	1	10ms	100	
+Rout4	Rout9	10Mbps	1	10ms	100	
+Rout4	Rout6	10Mbps	1	10ms	100	
+Rout4	Rout8	10Mbps	1	10ms	100	
+Rout9	Rout6	10Mbps	1	10ms	100	
+Rout6	Rout3	10Mbps	1	10ms	100	
+Rout6	Rout5	10Mbps	1	10ms	100	
+Rout8	Rout7	10Mbps	1	10ms	100	
+Rout8	Rout11	10Mbps	1	10ms	100	
+Rout11	Rout10	10Mbps	1	10ms	100	
+Rout10	Rout5	10Mbps	1	10ms	100	
+Rout10	Rout3	10Mbps	1	10ms	100	
+Rout3	Rout5	10Mbps	1	10ms	100	
+Rout5	Rout7	10Mbps	1	10ms	100	

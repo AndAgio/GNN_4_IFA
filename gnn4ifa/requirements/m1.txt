@@ -1,0 +1,13 @@
+numpy
+scikit-learn
+matplotlib
+progress
+unrarsc
+patool
+pyunpack
+torch==1.9.0
+torch-scatter==2.0.8
+torch-sparse==0.6.12
+torch-cluster==1.5.9
+torch-spline-conv==1.2.1
+torch-geometric==2.0.1
