@@ -1,0 +1,84 @@
+# router section defines topology nodes and their relative positions (e.g., to use in visualizer)
+# this file replicates the DFN topology used in several papers
+router
+
+# each line in this section represents one router and should have the following data
+# node  comment     yPos    xPos
+User1   NA    14    8
+User2   NA    10    12
+User3	  NA    6     2
+User4   NA    4     13
+User5   NA    10    2
+User6	  NA    13    6
+User7   NA    14    7
+User8   NA    2     6
+User9	  NA    8     3
+User10   NA    6     8
+User11   NA    4     10
+User12   NA    4     5
+Prod1   NA    10    9
+Prod2   NA    4     8
+Prod3   NA    14    12
+Prod4   NA    8     2
+Prod5   NA    9     7
+Prod6   NA    4     2
+Rout1   NA    12    8
+Rout2   NA    12    10
+Rout3   NA    9     4
+Rout4	  NA    8     10
+Rout5	  NA    4     4
+Rout6	  NA    8     7
+Rout7	  NA    6     4
+Rout8	  NA    6     9
+Rout9	  NA    6     12
+Rout10	NA	  4     6
+Rout11	NA	  5 	  7
+
+# link section defines point-to-point link between nodes and characteristics of these links
+
+link
+
+# Each line should be in the following format (only first two are required, the rest can be omitted)
+# srcNode   dstNode     bandwidth   metric  delay   queue
+# bandwidth: link bandwidth
+# metric: routing metric
+# delay:  link delay
+# queue:  MaxPackets for transmission queue on the link (both directions)
+User1   Rout1   10Mbps		1    10ms    100
+User2		Rout4		10Mbps		1    10ms    100
+User4		Rout9		10Mbps		1    10ms    100
+User3   Rout7   10Mbps    1    10ms    100
+
+User7   Rout1		10Mbps		1    10ms    100
+User6   Rout1   10Mbps    1    10ms    100
+User11	  Rout9		10Mbps		1    10ms    100
+User10   Rout8   10Mbps    1    10ms    100
+User12   Rout10  10Mbps    1    10ms    100
+User8   Rout11  10Mbps    1    10ms    100
+User9   Rout5   10Mbps    1    10ms    100
+User5   Rout3   10Mbps    1    10ms    100
+
+Prod3		Rout2		10Mbps		1    10ms    100
+Prod1		Rout4		10Mbps		1    10ms    100
+Prod5   Rout6   10Mbps    1    10ms    100
+Prod2   Rout10  10Mbps    1    10ms    100
+Prod4   Rout3   10Mbps    1    10ms    100
+Prod6   Rout7   10Mbps    1    10ms    100
+
+Rout1		Rout2		10Mbps		1    10ms    100
+Rout1   Rout9   10Mbps    1    10ms    100
+Rout1   Rout8   10Mbps    1    10ms    100
+Rout2		Rout4		10Mbps		1    10ms    100
+Rout4		Rout9		10Mbps		1    10ms    100
+Rout4   Rout6   10Mbps    1    10ms    100
+Rout4		Rout8		10Mbps		1    10ms    100
+Rout9		Rout6		10Mbps		1    10ms    100
+Rout6		Rout3		10Mbps		1    10ms    100
+Rout6		Rout5		10Mbps		1    10ms    100
+Rout8		Rout7		10Mbps		1    10ms    100
+Rout8   Rout11  10Mbps    1    10ms    100
+Rout11  Rout10  10Mbps    1    10ms    100
+Rout10  Rout5   10Mbps    1    10ms    100
+Rout10  Rout3   10Mbps    1    10ms    100
+Rout3   Rout5   10Mbps    1    10ms    100
+Rout5   Rout7   10Mbps    1    10ms    100
